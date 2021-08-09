@@ -29,7 +29,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.header_container}>
         <div className={styles.header_inner}>
-          <div>
+          <div className={styles.header_brand}>
             <Link href="/">
               <a className="inline-flex items-center">
                 <span className="font-semibold text-xl font-fira-code">
@@ -51,15 +51,10 @@ export default function Header() {
                 </li>
               );
             })}
-            <li className="px-1.5">
-              <button
-                className="flex items-center justify-center px-0 w-11 h-11 text-2xl"
-                onClick={toggleTheme}
-              >
-                {isDarkTheme ? "☀️" : "🌙"}
-              </button>
-            </li>
           </ul>
+          <button className={styles.header_mode_button} onClick={toggleTheme}>
+            {isDarkTheme ? "☀️" : "🌙"}
+          </button>
         </div>
       </div>
     </header>

@@ -3,22 +3,28 @@
   & > .header_container {
     @apply container;
     & > .header_inner {
-      @apply md:flex justify-between items-center py-3;
+      @apply flex flex-wrap items-center py-2;
+      & > .header_brand {
+        @apply relative flex-1 py-2;
+      }
       & > .header_nav {
-        @apply flex items-center -mx-1.5;
+        @apply flex flex-1 items-center justify-start sm:justify-end order-2 sm:order-none -mx-1.5 py-1;
         & > li {
-          @apply px-1.5;
+          @apply px-1.5 sm:flex-none flex-1;
           & > a {
-            @apply inline-flex items-center justify-center
+            @apply flex items-center justify-center
             text-default-700 bg-transparent border-default-200 border-2
-            h-11 px-4
-            font-fira-code font-medium
+            h-8 px-4 sm:h-11
+            font-fira-code font-medium text-xs sm:text-sm
             hover:bg-secondary-light;
             &.active {
               @apply bg-default text-inverted;
             }
           }
         }
+      }
+      & > .header_mode_button {
+        @apply flex items-center justify-center px-0 ml-3 w-auto sm:w-11 h-11 text-lg sm:text-2xl;
       }
     }
   }
