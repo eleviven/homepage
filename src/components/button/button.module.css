@@ -1,0 +1,34 @@
+.button {
+  @apply inline-flex items-center justify-center
+  font-fira-code;
+
+  &.size-small {
+    @apply px-3 h-9 text-sm border;
+  }
+  &.size-medium {
+    @apply px-3 h-9 text-sm border;
+  }
+  &.size-large {
+    @apply px-4 h-11 text-base border-2 font-medium;
+  }
+
+  &.appearance-fill {
+    @apply border-default-100;
+    &.variant-primary {
+      @apply bg-primary-500 text-white;
+    }
+    &.variant-secondary {
+      @apply bg-secondary text-default-700 hover:bg-default hover:text-inverted;
+    }
+  }
+  &.appearance-ghost {
+    @apply text-default-700 bg-transparent border-default-200;
+    &.variant-primary {
+      @apply hover:bg-primary-500
+      hover:text-white;
+    }
+    &.variant-secondary {
+      @apply hover:bg-default hover:text-inverted;
+    }
+  }
+}

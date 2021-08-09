@@ -1,0 +1,25 @@
+.header {
+  @apply relative bg-secondary-dark border-b border-secondary-light;
+  & > .header_container {
+    @apply container;
+    & > .header_inner {
+      @apply md:flex justify-between items-center py-3;
+      & > .header_nav {
+        @apply flex items-center -mx-1.5;
+        & > li {
+          @apply px-1.5;
+          & > a {
+            @apply inline-flex items-center justify-center
+            text-default-700 bg-transparent border-default-200 border-2
+            h-11 px-4
+            font-fira-code font-medium
+            hover:bg-secondary-light;
+            &.active {
+              @apply bg-default text-inverted;
+            }
+          }
+        }
+      }
+    }
+  }
+}
