@@ -5,10 +5,10 @@
     & > .header_inner {
       @apply flex flex-wrap items-center py-2;
       & > .header_brand {
-        @apply relative flex-1 py-2;
+        @apply relative flex-1 order-1 py-2;
       }
       & > .header_nav {
-        @apply flex flex-1 items-center justify-start sm:justify-end order-2 sm:order-none -mx-1.5 py-1;
+        @apply flex items-center justify-start sm:justify-end order-2 w-full sm:w-auto py-1;
         & > li {
           @apply px-1.5 sm:flex-none flex-1;
           & > a {
@@ -24,7 +24,7 @@
         }
       }
       & > .header_mode_button {
-        @apply flex items-center justify-center px-0 ml-3 w-auto sm:w-11 h-11 text-lg sm:text-2xl;
+        @apply flex items-center justify-center order-1 sm:order-3 px-0 ml-3 w-auto sm:w-11 h-11 text-lg sm:text-2xl;
       }
     }
   }
