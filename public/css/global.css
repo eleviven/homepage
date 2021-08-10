@@ -87,3 +87,9 @@ html.dark:root {
     @apply bg-background text-default;
   }
 }
+
+@layer components {
+  .section {
+    @apply mb-8 sm:mb-14;
+  }
+}
