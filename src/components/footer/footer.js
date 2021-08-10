@@ -18,7 +18,7 @@ const TECHNOLOGIES_LIST = [
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary border-t border-default-100 py-8">
+    <footer className="py-8">
       <div className="container">
         <ul className="flex items-center justify-center py-4">
           {TECHNOLOGIES_LIST.map((item, index) => (
