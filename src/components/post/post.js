@@ -7,9 +7,9 @@ export default class Post extends PureComponent {
     const { title, date, className, ...props } = this.props;
     return (
       <div className={cn("relative py-3 px-4 hover:bg-secondary-light", className)} {...props}>
-        <div className="flex items-center">
-          {date && <time className="text-default-600 font-fira-code w-24">{date}</time>}
-          <h3 className="font-medium text-xl">{title}</h3>
+        <div className="flex sm:items-center flex-col sm:flex-row">
+          {date && <time className="text-default-600 font-fira-code w-24 mb-2 sm:mb-0">{date}</time>}
+          <h3 className="font-medium text-base sm:text-xl">{title}</h3>
         </div>
       </div>
     );
