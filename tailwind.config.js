@@ -1,10 +1,10 @@
 module.exports = {
   mode: "jit",
+  darkMode: "class",
   purge: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "class",
   important: true,
   theme: {
     container: {
@@ -21,6 +21,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        secondary: "var(--color-secondary)",
+        tertiary: "var(--color-tertiary)",
+        background: "var(--color-background)",
+        corner: "var(--color-corner)",
         primary: {
           100: "var(--color-primary-100)",
           200: "var(--color-primary-200)",
@@ -31,11 +35,6 @@ module.exports = {
           700: "var(--color-primary-700)",
           800: "var(--color-primary-800)",
           900: "var(--color-primary-900)",
-        },
-        secondary: {
-          DEFAULT: "var(--color-secondary)",
-          dark: "var(--color-secondary-dark)",
-          light: "var(--color-secondary-light)",
         },
         default: {
           DEFAULT: "var(--color-default)",
