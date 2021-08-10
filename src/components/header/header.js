@@ -11,6 +11,10 @@ const MENU = [
     url: "/",
   },
   {
+    title: "Blog",
+    url: "/blog",
+  },
+  {
     title: "Projects",
     url: "/projects",
   },
