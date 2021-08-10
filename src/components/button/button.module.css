@@ -18,11 +18,11 @@
       @apply bg-primary-500 text-white;
     }
     &.variant-secondary {
-      @apply bg-secondary text-default-700 hover:bg-default hover:text-inverted;
+      @apply bg-tertiary text-default-700 hover:bg-default hover:text-inverted;
     }
   }
   &.appearance-ghost {
-    @apply text-default-700 bg-transparent border-default-200;
+    @apply text-default-700 bg-transparent border-default-100;
     &.variant-primary {
       @apply hover:bg-primary-500
       hover:text-white;
