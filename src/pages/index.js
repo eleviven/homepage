@@ -1,23 +1,44 @@
-import React from "react";
-import { IntroBlock, Layout, Paragraph, Post } from "../components";
+import { Fragment } from "react";
+import { useRouter } from "next/router";
+import { IntroBlock, Paragraph, Post, Head, ProjectItem } from "../components";
 import { DEVELOPER } from "../constants";
 
+const ARTICLES = [
+  {
+    title: "Initial article",
+    date: new Date(),
+    url: "/atricles/initial-article",
+  },
+];
+
 export default function Home() {
+  const router = useRouter();
   return (
-    <Layout>
+    <Fragment>
+      <Head />
       <IntroBlock
         title={`I'm ${DEVELOPER.NAME}`}
         description="I'm a front end developer. I love sharing what I've learned and learning new things. Years from now, I hope this will be an informative blog for new developers."
         image="/images/eleviven.jpeg"
-        className="mb-14"
+        className="section"
       />
       <div className="container">
-        <Paragraph title="Latest Articles" />
-        <Post.List
-          data={[{ title: "How to Connect to an API with JavaScript", date: new Date(), url: "/atricles/test" }]}
+        <Paragraph
+          title="Latest Articles"
+          showMore={true}
+          onClickMore={() => router.push("/blog")}
         />
-        <h1 className="mt-10">Home Screen</h1>
+        <Post.List data={ARTICLES} className="section" />
+        <Paragraph title="Projects" />
+        <section className="grid grid-cols-3 gap-12 py-3 section">
+          <ProjectItem
+            icon="🚀"
+            title="Notifly"
+            description="A custom notification component for react native"
+            href="/"
+          />
+        </section>
       </div>
-    </Layout>
+    </Fragment>
   );
 }
