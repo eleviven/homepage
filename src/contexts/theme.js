@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState, createContext, useContext } from "react";
+import { useEffect, useState, createContext, useContext } from "react";
 
 const ThemeContext = createContext(null);
 
@@ -27,7 +27,7 @@ export default function ThemeProvider({ children }) {
     setTheme(mode);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const mode = localStorage.getItem("mode");
     setMode(mode || Modes.dark);
   }, []);
