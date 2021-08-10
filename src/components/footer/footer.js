@@ -19,7 +19,7 @@ const TECHNOLOGIES_LIST = [
 export default function Footer() {
   return (
     <footer className="py-8">
-      <div className="container">
+      <div className="container mt-16">
         <ul className="flex items-center justify-center py-4">
           {TECHNOLOGIES_LIST.map((item, index) => (
             <li key={index} className="mx-3">
