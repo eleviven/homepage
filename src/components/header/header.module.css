@@ -1,5 +1,5 @@
 .header {
-  @apply relative bg-secondary-dark border-b border-secondary-light;
+  @apply sticky z-10 top-0 bg-secondary-dark border-b border-secondary-light;
   & > .header_container {
     @apply container;
     & > .header_inner {
@@ -10,12 +10,12 @@
       & > .header_nav {
         @apply flex items-center justify-start sm:justify-end order-2 w-full sm:w-auto py-1;
         & > li {
-          @apply px-1.5 sm:flex-none flex-1;
+          @apply px-1 sm:px-1.5 sm:flex-none flex-1;
           & > a {
             @apply flex items-center justify-center
             text-default-700 bg-transparent border-default-200 border-2
-            h-8 px-4 sm:h-11
-            font-fira-code font-medium text-xs sm:text-sm
+            h-8 px-2 sm:px-4 sm:h-11
+            font-fira-code font-medium text-xs sm:text-sm whitespace-nowrap
             hover:bg-secondary-light;
             &.active {
               @apply bg-default text-inverted;
