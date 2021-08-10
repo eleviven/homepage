@@ -1,4 +1,5 @@
 export { default as Layout } from "./layout/layout";
+export { default as Head } from "./head/head";
 export { default as Header } from "./header/header";
 export { default as Footer } from "./footer/footer";
 export { default as Button } from "./button/button";
