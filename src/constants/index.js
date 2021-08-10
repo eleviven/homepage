@@ -4,5 +4,5 @@ export const DEVELOPER = {
 
 export const APP = {
   TITLE: DEVELOPER.NAME,
-  URL: process.env.NEXT_PUBLIC_WEBSITE_URL,
+  DOMAIN: process.env.NEXT_PUBLIC_WEBSITE_URL,
 };
