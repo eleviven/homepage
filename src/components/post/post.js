@@ -12,7 +12,7 @@ export default class Post extends PureComponent {
       >
         <div className="flex sm:items-center flex-col sm:flex-row">
           {date && (
-            <time className="flex-shrink-0 text-default-500 font-fira-code w-24 mb-2 sm:mb-0">
+            <time className="flex-shrink-0 text-default-500 font-dm-mone w-24 mb-2 sm:mb-0">
               {date}
             </time>
           )}

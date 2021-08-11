@@ -12,7 +12,7 @@ export default function ProjectItem({
       <Link href={href}>
         <a className="group flex items-center text-xl">
           {icon && <span className="mr-3">{icon}</span>}
-          <h3 className="underline text-default-800 font-fira-code font-semibold group-hover:text-default-500 dark:group-hover:text-primary-300">
+          <h3 className="underline text-default-800 font-dm-mone font-semibold group-hover:text-default-500 dark:group-hover:text-primary-300">
             {title}
           </h3>
         </a>

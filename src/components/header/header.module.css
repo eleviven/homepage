@@ -15,7 +15,7 @@
             @apply flex items-center justify-center
             text-default-700 bg-transparent hover:bg-tertiary border-default-100 border
             h-8 px-2 sm:px-4 sm:h-11
-            font-fira-code font-medium text-xs sm:text-sm whitespace-nowrap;
+            font-dm-mone font-medium text-xs sm:text-sm whitespace-nowrap;
             &.active {
               @apply bg-default text-inverted;
             }

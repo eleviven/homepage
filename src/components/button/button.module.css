@@ -1,6 +1,6 @@
 .button {
   @apply inline-flex items-center justify-center
-  font-fira-code;
+  font-dm-mone;
 
   &.size-small {
     @apply px-3 h-9 text-sm border;

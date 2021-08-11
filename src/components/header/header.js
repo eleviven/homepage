@@ -36,7 +36,7 @@ export default function Header() {
           <div className={styles.header_brand}>
             <Link href="/">
               <a className="inline-flex items-center">
-                <span className="font-semibold text-xl font-fira-code">
+                <span className="font-semibold text-xl font-dm-mone">
                   ⚡️ {DEVELOPER.NAME}
                 </span>
               </a>

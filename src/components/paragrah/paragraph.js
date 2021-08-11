@@ -6,7 +6,7 @@ export default function Paragraph({ title, showMore, onClickMore, ...props }) {
       className="flex items-center justify-between border-b-[3px] border-corner mb-6 pb-2.5"
       {...props}
     >
-      <h2 className="text-default dark:text-primary-300 text-xl sm:text-3xl font-fira-code font-semibold">
+      <h2 className="text-default dark:text-primary-300 text-xl sm:text-3xl font-dm-mone font-semibold">
         {title}
       </h2>
       {showMore && (

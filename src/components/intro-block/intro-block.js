@@ -18,7 +18,7 @@ export default function IntroBlock({
     >
       <div className="container flex justify-between items-center flex-col sm:flex-row">
         <div className="sm:w-4/6">
-          <h1 className="text-2xl sm:text-4xl font-bold font-fira-code">
+          <h1 className="text-2xl sm:text-4xl font-bold font-dm-mone">
             {title}
           </h1>
           {description && (
