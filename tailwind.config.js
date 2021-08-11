@@ -17,7 +17,9 @@ module.exports = {
       },
     },
     fontFamily: {
-      "fira-code": "'Fira Code', monospace",
+      "dm-mone": "'DM Mono', monospace",
+      "dm-sans":
+        '"DM Sans",-apple-system,BlinkMacSystemFont,"Helvetica Neue","Roboto",Roboto,Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"!important',
     },
     extend: {
       colors: {
