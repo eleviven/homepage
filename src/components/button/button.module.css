@@ -26,6 +26,9 @@
     &.variant-success {
       @apply text-white bg-green-500 hover:bg-green-400;
     }
+    &.variant-warning {
+      @apply text-black bg-yellow-200 hover:bg-yellow-300;
+    }
   }
   &.appearance-ghost {
     @apply text-default-700 bg-transparent border-default-100;
@@ -41,6 +44,9 @@
     }
     &.variant-success {
       @apply hover:text-white hover:bg-green-400;
+    }
+    &.variant-warning {
+      @apply hover:bg-yellow-200 hover:text-black;
     }
   }
 }
