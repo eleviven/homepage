@@ -5,7 +5,7 @@
     & > .header_inner {
       @apply flex flex-wrap items-center py-2;
       & > .header_brand {
-        @apply relative flex-1 order-1 py-2;
+        @apply relative flex-1 order-1 py-2 text-default;
       }
       & > .header_nav {
         @apply flex items-center justify-start sm:justify-end order-2 w-full sm:w-auto py-1;
