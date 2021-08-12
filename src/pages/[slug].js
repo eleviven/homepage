@@ -2,7 +2,8 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { MARKS, BLOCKS } from "@contentful/rich-text-types";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
-import { Hero, Head } from "../components/";
+import { Hero, Head, Paragraph, IntroBlock } from "../components/";
+import { DEVELOPER } from "../constants";
 import { client } from "../lib/contentful";
 
 export const getStaticPaths = async () => {
@@ -58,6 +59,9 @@ const contentOptions = {
       }
       return <p>{children}</p>;
     },
+    [BLOCKS.HEADING_2]: (node, children) => {
+      return <Paragraph children={children} />;
+    },
   },
   renderMark: {
     [MARKS.CODE]: (text) => {
@@ -66,7 +70,7 @@ const contentOptions = {
         <SyntaxHighlighter
           language={language}
           style={atomOneDark}
-          className={`language-${language}`}
+          className={`language-${language} p-3 sm:p-4`}
         >
           {text}
         </SyntaxHighlighter>
@@ -91,11 +95,16 @@ export default function Page({ article }) {
           tags={tags}
           description={description}
         />
-        <article className="py-8 sm:py-12">
+        <article className="article-content">
           <div className="container">
             {documentToReactComponents(content, contentOptions)}
           </div>
         </article>
+        <IntroBlock
+          title={DEVELOPER.NAME}
+          description={DEVELOPER.DESCRIPTION}
+          image={DEVELOPER.IMAGE}
+        />
       </main>
     );
   }
