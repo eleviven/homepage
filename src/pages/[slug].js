@@ -2,7 +2,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { MARKS, BLOCKS } from "@contentful/rich-text-types";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
-import { Hero } from "../components/";
+import { Hero, Head } from "../components/";
 import { client } from "../lib/contentful";
 
 export const getStaticPaths = async () => {
@@ -83,6 +83,7 @@ export default function Page({ article }) {
       article;
     return (
       <main>
+        <Head title={title} description={description} keywords={keywords} />
         <Hero
           title={title}
           author={author?.fields.fullname}
