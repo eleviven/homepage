@@ -5,18 +5,23 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "svgr": "svgr public/images/icons -d src/components/icons --icon"
   },
   "dependencies": {
-    "@heroicons/react": "^1.0.3",
+    "@contentful/rich-text-react-renderer": "^15.1.0",
+    "@contentful/rich-text-types": "^15.1.0",
     "@tailwindcss/line-clamp": "^0.2.1",
     "classnames": "^2.2.6",
+    "contentful": "^8.4.2",
     "dayjs": "^1.10.6",
     "next": "11.0.1",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-syntax-highlighter": "^15.4.4"
   },
   "devDependencies": {
+    "@svgr/cli": "^5.5.0",
     "autoprefixer": "^10.3.1",
     "postcss": "^8.3.6",
     "postcss-nested": "^5.0.5",
