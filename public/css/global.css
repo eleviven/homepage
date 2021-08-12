@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;700&display=swap");
 
 html:root {
   --color-secondary: #fff;
@@ -84,7 +84,13 @@ html.dark:root {
 
 @layer base {
   body {
-    @apply bg-background text-default font-dm-sans;
+    @apply bg-background text-default-700 font-dm-sans;
+  }
+  p {
+    @apply text-xl leading-relaxed mb-6;
+  }
+  pre[class*="language-"] {
+    @apply border-2 border-default-200;
   }
 }
 
