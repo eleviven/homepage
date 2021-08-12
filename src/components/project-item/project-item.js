@@ -18,7 +18,7 @@ export default function ProjectItem({
         </a>
       </Link>
       {description && (
-        <p className="text-default-500 text-xl font-normal mt-2 line-clamp-3">
+        <p className="text-default-500 text-xl font-normal mt-2 mb-0 line-clamp-3">
           {description}
         </p>
       )}
