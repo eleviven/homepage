@@ -7,6 +7,7 @@ export default function Head({ title, description, keywords, image }) {
   const url = APP.DOMAIN + asPath;
 
   title = title ? `${title} | ${APP.TITLE}` : APP.TITLE;
+  if (!description) description = APP.DESCRIPTION;
 
   return (
     <NextHead>
