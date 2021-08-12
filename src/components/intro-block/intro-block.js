@@ -29,17 +29,19 @@ export default function IntroBlock({
           )}
           {children}
         </div>
-        <div className="flex-1 w-full mt-6 sm:mt-0 hidden sm:block">
-          <div className="border-4 border-corner">
-            <Image
-              src={image}
-              alt={title}
-              width="350"
-              height="350"
-              layout="responsive"
-            />
+        {image && (
+          <div className="flex-1 w-full mt-6 sm:mt-0 hidden sm:block">
+            <div className="border-4 border-corner">
+              <Image
+                src={image}
+                alt={title}
+                width="350"
+                height="350"
+                layout="responsive"
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
