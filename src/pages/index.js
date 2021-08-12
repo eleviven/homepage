@@ -54,7 +54,7 @@ export default function Home({ articles, projects }) {
                 accessoryLeft={
                   <DEVELOPER.SOCIAL.GITHUB.ICON className="w-5 h-5" />
                 }
-                tabindex="-1"
+                tabIndex="-1"
               />
             </a>
           </li>
