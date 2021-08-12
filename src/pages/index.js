@@ -36,8 +36,8 @@ export default function Home({ articles, projects }) {
       <Head />
       <IntroBlock
         title={`I'm ${DEVELOPER.NAME}`}
-        description="I'm a front end developer. I love sharing what I've learned and learning new things. Years from now, I hope this will be an informative blog for new developers."
-        image="/images/eleviven.jpeg"
+        image={DEVELOPER.IMAGE}
+        description={DEVELOPER.DESCRIPTION}
         className="section"
       >
         <ul className="flex mt-6">
