@@ -1,8 +1,9 @@
+import { Fragment } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { MARKS, BLOCKS } from "@contentful/rich-text-types";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
-import { Hero, Head, Paragraph, IntroBlock } from "../components/";
+import { Hero, Head, Paragraph, IntroBlock, Skeleton } from "../components/";
 import { DEVELOPER } from "../constants";
 import { client } from "../lib/contentful";
 
@@ -81,7 +82,12 @@ const contentOptions = {
 
 export default function Page({ article }) {
   if (!article) {
-    return "Loading...";
+    return (
+      <Fragment>
+        <Skeleton.Hero />
+        <Skeleton.Article />
+      </Fragment>
+    );
   } else {
     const { title, description, keywords, content, author, tags, createdAt } =
       article;
