@@ -1,12 +1,14 @@
 import React from "react";
 import cn from "classnames";
 import Button from "../button/button";
+import { renderComponent } from "../../utils";
 
 export default function Paragraph({
   title,
   showMore,
   onClickMore,
   className,
+  accessoryRight,
   children,
   ...props
 }) {
@@ -26,6 +28,7 @@ export default function Paragraph({
       {showMore && (
         <Button title="View all" variant="secondary" onClick={onClickMore} />
       )}
+      {accessoryRight && renderComponent(accessoryRight)}
     </div>
   );
 }

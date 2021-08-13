@@ -1,15 +1,7 @@
 import React from "react";
 import cn from "classnames";
+import { renderComponent } from "../../utils";
 import styles from "./button.module.css";
-
-const renderComponent = (component) => {
-  switch (typeof component) {
-    case "function":
-      return component();
-    default:
-      return component;
-  }
-};
 
 export default function Button({
   title,
