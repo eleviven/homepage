@@ -1,0 +1,22 @@
+.skeleton {
+  @apply relative bg-default-100 h-5 sm:h-7 overflow-hidden;
+  &::before {
+    @apply absolute top-0 left-0 w-full h-full bg-repeat bg-cover;
+    content: "";
+    animation: skeleton 10s infinite forwards linear;
+    background-image: linear-gradient(
+      45deg,
+      transparent 5%,
+      rgb(255 255 255 / 5%) 35%,
+      transparent 65%
+    );
+  }
+  @keyframes skeleton {
+    from {
+      background-position: 0rem;
+    }
+    to {
+      background-position: -360rem;
+    }
+  }
+}
