@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Head, Hero, Paragraph, Post } from "../components";
+import { Button, Head, Hero, Paragraph } from "../components";
 import { REGEXP } from "../constants/regexp";
 import { client } from "../lib/contentful";
 import date from "../lib/date";
@@ -30,6 +30,10 @@ export default function Projects({ projects }) {
       <section className="container">
         <div className="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-14">
           {projects?.map((item) => {
+            const actions = [
+              { title: "Source", url: item.source },
+              { title: "Demo", url: item.demo },
+            ];
             const thumbnail = { ...item.thumbnail?.fields.file };
             if (thumbnail && !new RegExp(REGEXP.PROTOCOL).test(thumbnail.url)) {
               thumbnail.url = "https:" + thumbnail.url;
@@ -57,6 +61,20 @@ export default function Projects({ projects }) {
                     layout="responsive"
                     {...thumbnail.details.image}
                   />
+                </div>
+                <div className="flex gap-3 mt-6">
+                  {actions.map((action, index) =>
+                    action.url ? (
+                      <a key={index} href={action.url} target="_blank">
+                        <Button
+                          title={action.title}
+                          variant="warning"
+                          appearance="ghost"
+                          size="large"
+                        />
+                      </a>
+                    ) : null
+                  )}
                 </div>
               </div>
             );
