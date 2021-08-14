@@ -11,7 +11,7 @@ export default function ProjectItem({
   return (
     <div className="relative" {...props}>
       <Link href={href}>
-        <a className="group flex items-center" target={target}>
+        <a className="group flex items-center" target={target} rel="noopener noreferrer">
           {icon && <span className="mr-3 text-xl">{icon}</span>}
           <h3 className="underline text-default-800 font-dm-mone font-semibold text-xl group-hover:text-default-500 dark:group-hover:text-primary-300">
             {title}

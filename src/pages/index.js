@@ -49,8 +49,9 @@ export default function Home({ articles, projects, githubUser }) {
           <li>
             <a
               href={DEVELOPER.SOCIAL.GITHUB.URL}
-              target="_blank"
               title={DEVELOPER.SOCIAL.GITHUB.TITLE}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Button
                 title={`${githubUser?.followers} following`}
