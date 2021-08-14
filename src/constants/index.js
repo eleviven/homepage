@@ -9,6 +9,7 @@ export const DEVELOPER = {
     GITHUB: {
       TITLE: "Github",
       URL: "https://github.com/eleviven",
+      USERNAME: "eleviven",
       ICON: SvgGithub,
     },
   },
