@@ -32,9 +32,10 @@ export default function Footer() {
                 href={item.url}
                 title={item.title}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="relative flex items-center justify-center w-14 h-14 p-2 filter invert-0 dark:invert"
               >
-                <img src={item.icon} alt={item.title} />
+                <img src={item.icon} alt={item.title} width={40} height={40} />
               </a>
             </li>
           ))}
