@@ -1,10 +1,11 @@
-import { Head, Hero, Paragraph, Post } from "../components";
+import { Head, Hero, Post } from "../components";
 import { client } from "../lib/contentful";
 
 export const getStaticProps = async () => {
   const articles = await client.getEntries({
     content_type: "articles",
     order: "-sys.createdAt",
+    "fields.hide": false,
   });
   return {
     props: {
