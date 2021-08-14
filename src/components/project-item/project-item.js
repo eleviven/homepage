@@ -5,12 +5,13 @@ export default function ProjectItem({
   description,
   icon,
   href,
+  target,
   ...props
 }) {
   return (
     <div className="relative" {...props}>
       <Link href={href}>
-        <a className="group flex items-center">
+        <a className="group flex items-center" target={target}>
           {icon && <span className="mr-3 text-xl">{icon}</span>}
           <h3 className="underline text-default-800 font-dm-mone font-semibold text-xl group-hover:text-default-500 dark:group-hover:text-primary-300">
             {title}
@@ -25,3 +26,7 @@ export default function ProjectItem({
     </div>
   );
 }
+
+ProjectItem.defaultProps = {
+  target: "_self",
+};
