@@ -6,18 +6,9 @@ export const getStaticProps = async () => {
     content_type: "articles",
     order: "-sys.createdAt",
   });
-  let articlesGroup = articles?.reduce((acc, i) => {
-    const createdAt = new Date(i.createdAt).getUTCFullYear();
-    if (!acc[createdAt]) {
-      acc[createdAt] = { createdAt, data: [] };
-    }
-    acc[createdAt].data.push(i);
-    return acc;
-  }, {});
-  articlesGroup = Object.values(articlesGroup);
   return {
     props: {
-      articles: articlesGroup,
+      articles,
     },
     revalidate: 10,
   };
@@ -35,12 +26,7 @@ export default function Blog({ articles }) {
       <Hero {...page} />
       <section className="container">
         <div className="mt-8 sm:mt-14">
-          {articles?.map((group) => (
-            <div key={group.createdAt} className="section">
-              <Paragraph title={group.createdAt} />
-              <Post.List data={group.data || []} />
-            </div>
-          ))}
+          <Post.List data={articles} isGroup={true} />
         </div>
       </section>
     </main>
