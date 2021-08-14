@@ -16,7 +16,7 @@ export const getStaticProps = async () => {
     content_type: "articles",
     limit: 10,
     order: "-sys.createdAt",
-    "fields.hide": false,
+    "fields.page": false,
   });
   const projects = await client.getEntries({
     content_type: "projects",

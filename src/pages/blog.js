@@ -5,7 +5,7 @@ export const getStaticProps = async () => {
   const articles = await client.getEntries({
     content_type: "articles",
     order: "-sys.createdAt",
-    "fields.hide": false,
+    "fields.page": false,
   });
   return {
     props: {

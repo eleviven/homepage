@@ -117,7 +117,7 @@ html.dark:root {
     @apply mb-8 sm:mb-14;
   }
   .article-content {
-    @apply py-8 sm:py-12;
+    @apply my-8 sm:my-12;
     & a {
       @apply dark:text-blue-400 hover:text-blue-400 dark:hover:text-default border-blue-300 border-b-2 font-medium;
     }
