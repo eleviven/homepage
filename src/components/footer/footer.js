@@ -14,13 +14,18 @@ const TECHNOLOGIES_LIST = [
     icon: "/images/icon-vercel.png",
     url: "https://vercel.com/",
   },
+  {
+    title: "CMS",
+    icon: "/images/icon-contentful.png",
+    url: "https://www.contentful.com/",
+  },
 ];
 
 export default function Footer() {
   return (
     <footer className="py-8">
       <div className="container mt-16">
-        <ul className="flex items-center justify-center py-4">
+        <ul className="flex items-center justify-center flex-wrap py-4">
           {TECHNOLOGIES_LIST.map((item, index) => (
             <li key={index} className="mx-3">
               <a
