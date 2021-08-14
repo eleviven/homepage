@@ -8,6 +8,7 @@ import {
   Button,
 } from "../components";
 import { client } from "../lib/contentful";
+import GithubAPI from "../lib/github-api";
 import { DEVELOPER } from "../constants";
 
 export const getStaticProps = async () => {
@@ -20,17 +21,20 @@ export const getStaticProps = async () => {
     content_type: "projects",
     order: "-sys.createdAt",
   });
+  const githubUser = await GithubAPI.get.user(DEVELOPER.SOCIAL.GITHUB.USERNAME);
   return {
     props: {
       articles,
       projects,
+      githubUser,
     },
     revalidate: 10,
   };
 };
 
-export default function Home({ articles, projects }) {
+export default function Home({ articles, projects, githubUser }) {
   const router = useRouter();
+
   return (
     <main>
       <Head />
@@ -48,7 +52,7 @@ export default function Home({ articles, projects }) {
               title={DEVELOPER.SOCIAL.GITHUB.TITLE}
             >
               <Button
-                title={DEVELOPER.SOCIAL.GITHUB.TITLE}
+                title={`${githubUser?.followers} following`}
                 variant="success"
                 size="large"
                 accessoryLeft={
