@@ -80,7 +80,8 @@ export default function Home({ articles, projects, githubUser }) {
               icon={item.icon}
               title={item.title}
               description={item.description}
-              href={"/" + item.article?.fields.slug}
+              href={item.source}
+              target="_blank"
             />
           ))}
         </section>
