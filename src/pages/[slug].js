@@ -96,7 +96,7 @@ export default function Page({ article }) {
         <Head title={title} description={description} keywords={keywords} />
         <Hero
           title={title}
-          author={!article.page ? author?.fields.fullname : null}
+          author={author?.fields.fullname}
           createdAt={createdAt}
           tags={tags}
           description={description}

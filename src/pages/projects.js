@@ -28,19 +28,22 @@ export default function Projects({ projects }) {
       <Head {...page} />
       <Hero {...page} />
       <section className="container">
-        <div className="grid sm:grid-cols-2 gap-12 mt-8 sm:mt-14">
+        <div className="grid gap-12 mt-8 sm:mt-14">
           {projects?.map((item) => {
             const actions = [
               { title: "Source", url: item.source },
               { title: "Demo", url: item.demo },
             ];
-            const thumbnail = { ...item.thumbnail?.fields.file };
-            if (thumbnail && !new RegExp(REGEXP.PROTOCOL).test(thumbnail.url)) {
+            const thumbnail = { ...item.thumbnail?.fields?.file };
+            if (
+              thumbnail?.url &&
+              !new RegExp(REGEXP.PROTOCOL).test(thumbnail.url)
+            ) {
               thumbnail.url = "https:" + thumbnail.url;
             }
             return (
               <div key={item.id}>
-                <Paragraph title={item.title} accessoryRight={item.icon} />
+                <Paragraph title={item.icon + " " + item.title} />
                 <div>
                   <h4 className="text-default text-xl mb-1">
                     {item.description}
@@ -53,14 +56,6 @@ export default function Projects({ projects }) {
                       )} — ${item.technologies?.map((i) => ` ${i}`)}`}
                     </i>
                   </small>
-                </div>
-                <div className="mt-6">
-                  <Image
-                    src={thumbnail.url}
-                    alt={thumbnail.title}
-                    layout="responsive"
-                    {...thumbnail.details.image}
-                  />
                 </div>
                 <div className="flex gap-3 mt-6">
                   {actions.map((action, index) =>
@@ -76,6 +71,16 @@ export default function Projects({ projects }) {
                     ) : null
                   )}
                 </div>
+                {thumbnail?.url && (
+                  <div className="mt-6 relative">
+                    <Image
+                      src={thumbnail.url}
+                      alt={thumbnail.title}
+                      layout="responsive"
+                      {...thumbnail.details.image}
+                    />
+                  </div>
+                )}
               </div>
             );
           })}
