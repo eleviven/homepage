@@ -121,6 +121,26 @@ html.dark:root {
     & a {
       @apply dark:text-blue-400 hover:text-blue-400 dark:hover:text-default border-blue-300 border-b-2 font-medium;
     }
+    & hr {
+      @apply my-10 border-default-100;
+    }
+    & ul {
+      @apply list-disc pl-5;
+      & > li {
+        & > p {
+          @apply mb-1;
+        }
+        & a {
+          @apply border-none hover:border-solid;
+        }
+      }
+    }
+    & h1,
+    & h3,
+    & h4,
+    & h5 {
+      @apply mb-6 leading-relaxed;
+    }
   }
   .paragraph {
     @apply relative flex items-center justify-between border-b-[3px] border-corner mb-6 pb-2.5;
