@@ -2,13 +2,15 @@ import React from "react";
 import cn from "classnames";
 import Button from "../button/button";
 import { renderComponent } from "../../utils";
+import styles from "./paragraph.module.css";
 
 export default function Paragraph({
   title,
   showMore,
-  onClickMore,
+  border,
   className,
   accessoryRight,
+  onClickMore,
   children,
   ...props
 }) {
@@ -23,8 +25,22 @@ export default function Paragraph({
     });
 
   return (
-    <div className={cn("paragraph", className)} {...props}>
-      <h2 className="paragraph-title">{title || <CustomChildren />}</h2>
+    <div
+      className={cn(
+        styles.paragraph,
+        border && styles.paragraph_border,
+        className
+      )}
+      {...props}
+    >
+      <h2
+        className={cn(
+          styles.paragraph_title,
+          "text-default dark:text-primary-300"
+        )}
+      >
+        {title || <CustomChildren />}
+      </h2>
       {showMore && (
         <Button title="View all" variant="secondary" onClick={onClickMore} />
       )}
@@ -32,3 +48,7 @@ export default function Paragraph({
     </div>
   );
 }
+
+Paragraph.defaultProps = {
+  border: true,
+};

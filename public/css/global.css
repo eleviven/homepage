@@ -93,22 +93,22 @@ html.dark:root {
     @apply border-2 border-default-200;
   }
   h1 {
-    @apply text-4xl;
+    @apply text-3xl sm:text-4xl;
   }
   h2 {
-    @apply text-3xl;
+    @apply text-2xl sm:text-3xl;
   }
   h3 {
-    @apply text-2xl;
+    @apply text-xl sm:text-2xl;
   }
   h4 {
-    @apply text-xl;
+    @apply text-lg sm:text-xl;
   }
   h5 {
-    @apply text-lg;
+    @apply text-base sm:text-lg;
   }
   h6 {
-    @apply text-base;
+    @apply text-sm sm:text-base;
   }
 }
 
@@ -140,33 +140,6 @@ html.dark:root {
     & h4,
     & h5 {
       @apply mb-6 leading-relaxed;
-    }
-  }
-  .paragraph {
-    @apply relative flex items-center justify-between border-b-[3px] border-corner mb-6 pb-2.5;
-    &-title {
-      @apply text-default dark:text-primary-300 text-xl sm:text-3xl font-dm-mone font-semibold;
-    }
-    & > * a {
-      scroll-margin-top: 80px;
-      position: relative;
-      color: inherit !important;
-      border: none;
-      text-decoration: none;
-      &::before {
-        content: "🔗";
-        display: none;
-        position: absolute;
-        top: 50%;
-        right: 100%;
-        padding-right: 10px;
-        font-size: 16px;
-        line-height: 1;
-        transform: translateY(-50%);
-      }
-      &:hover::before {
-        display: block;
-      }
     }
   }
 }
