@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Button, Head, Hero, Paragraph } from "../components";
+import { Head, Hero, ProjectCard } from "../components";
 import { REGEXP } from "../constants/regexp";
 import { client } from "../lib/contentful";
 import date from "../lib/date";
@@ -42,46 +41,15 @@ export default function Projects({ projects }) {
               thumbnail.url = "https:" + thumbnail.url;
             }
             return (
-              <div key={item.id}>
-                <Paragraph title={item.icon + " " + item.title} />
-                <div>
-                  <h4 className="text-default text-xl mb-1">
-                    {item.description}
-                  </h4>
-                  <small className="text-base">
-                    <i>
-                      {`${date.format(
-                        item.createdAt,
-                        "YYYY"
-                      )} — ${item.technologies?.map((i) => ` ${i}`)}`}
-                    </i>
-                  </small>
-                </div>
-                <div className="flex gap-3 mt-6">
-                  {actions.map((action, index) =>
-                    action.url ? (
-                      <a key={index} href={action.url} target="_blank">
-                        <Button
-                          title={action.title}
-                          variant="warning"
-                          appearance="ghost"
-                          size="large"
-                        />
-                      </a>
-                    ) : null
-                  )}
-                </div>
-                {thumbnail?.url && (
-                  <div className="mt-6 relative">
-                    <Image
-                      src={thumbnail.url}
-                      alt={thumbnail.title}
-                      layout="responsive"
-                      {...thumbnail.details.image}
-                    />
-                  </div>
-                )}
-              </div>
+              <ProjectCard
+                key={item.id}
+                title={item.icon + " " + item.title}
+                description={item.description}
+                thumbnail={thumbnail}
+                year={date.format(item.createdAt, "YYYY")}
+                technologies={item.technologies}
+                actions={actions.filter((i) => i.url)}
+              />
             );
           })}
         </div>
