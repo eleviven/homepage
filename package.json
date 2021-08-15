@@ -12,6 +12,7 @@
     "@contentful/rich-text-react-renderer": "^15.1.0",
     "@contentful/rich-text-types": "^15.1.0",
     "@tailwindcss/line-clamp": "^0.2.1",
+    "@types/react": "^17.0.18",
     "classnames": "^2.2.6",
     "contentful": "^8.4.2",
     "dayjs": "^1.10.6",
