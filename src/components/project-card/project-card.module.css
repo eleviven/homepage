@@ -1,0 +1,12 @@
+.card {
+  @apply flex flex-col-reverse items-center md:flex-row;
+  .thumbnail {
+    @apply relative w-full md:w-5/12 mt-6 md:mt-0 md:mr-6;
+  }
+  .content {
+    @apply relative flex-1;
+    .actions {
+      @apply flex gap-3 mt-6;
+    }
+  }
+}
