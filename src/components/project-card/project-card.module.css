@@ -1,5 +1,5 @@
 .card {
-  @apply flex flex-col-reverse items-center md:flex-row;
+  @apply flex flex-col-reverse md:flex-row md:items-center;
   .thumbnail {
     @apply relative w-full md:w-5/12 mt-6 md:mt-0 md:mr-6;
   }
