@@ -8,7 +8,6 @@ export interface ProjectCardActions {
 export interface ProjectCardThumbnail {
   url: string;
   title: string;
-  details: object;
 }
 
 export interface ProjectCardProps {

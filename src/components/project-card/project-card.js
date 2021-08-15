@@ -22,7 +22,9 @@ export default function ProjectCard({
             src={thumbnail.url}
             alt={thumbnail.title}
             layout="responsive"
-            {...thumbnail.details.image}
+            objectFit="cover"
+            width={360}
+            height={250}
           />
         </figure>
       )}
